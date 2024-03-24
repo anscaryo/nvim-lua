@@ -1,3 +1,10 @@
+--local alias set = 'vim.keymap.set'
+
+
+--	Remapeo de teclas.
+vim.g.mapleader = ' '
+vim.api.nvim_set_keymap('i', 'fj', '<ESC>', {noremap = true})
+
 --  Atajos:
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Guardar'})
 
