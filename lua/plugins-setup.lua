@@ -16,14 +16,35 @@ return require('packer').startup(function(use)
 	-- Insertar los paquetes de plugins despues de esta linea.
 	
 	-- themes
-	use "folke/tokyonight.nvim"
-	vim.cmd[[set background=dark]]
-  vim.cmd[[colorscheme tokyonight]]
 
+  use("nvim-tree/nvim-web-devicons")  --   (opcional) Este complemento permite a Lualine usar íconos en la línea de estado.
+	
+  vim.cmd[[set background=dark]]
+ 
+    -- tokyonight --
+	--use "folke/tokyonight.nvim"
+  --vim.cmd[[colorscheme tokyonight]]
+
+	  -- oonedark --
+  --use "joshdick/onedark.vim"
+  --vim.cmd[[colorscheme onedark]]
+  
+    --  monokai --
+  use "tanvirtin/monokai.nvim"
+  vim.cmd[[colorscheme monokai]]
+ 
+  
 	-- nvim tree for sidebar and telescope
-	use "nvim-tree/nvim-tree.lua"
-	use "nvim-tree/nvim-web-devicons"
-	use "nvim-treestter/nvim-treestter"
+	--use "nvim-tree/nvim-tree.lua"
+	--use "nvim-tree/nvim-web-devicons"
+	
+	--	lualine
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+  --  use("nvim-lualine/lualine.nvim")  --  Plugin lualine
+
 
 	-- fin plugins
     if packer_bootstrap then

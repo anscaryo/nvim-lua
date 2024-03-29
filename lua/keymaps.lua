@@ -1,24 +1,39 @@
 --local alias set = 'vim.keymap.set'
-
+local set = vim.keymap.set
+local g = vim.g
 
 --	Remapeo de teclas.
-vim.g.mapleader = ' '
+g.mapleader = ' '
 vim.api.nvim_set_keymap('i', 'fj', '<ESC>', {noremap = true})
 
 --  Atajos:
-vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Guardar'})
+set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Guardar'})
 
-vim.keymap.set('n', '<leader>q', '<cmd>:q!<cr>', {desc = 'Salir'})
+set('n', '<leader>q', '<cmd>:q!<cr>', {desc = 'Salir'})
 
-vim.keymap.set('n', '<leader>wq', '<cmd>:wq<cr>', {desc = 'Salir'})
+set('n', '<leader>wq', '<cmd>:wq<cr>', {desc = 'Guardar y Salir'})
 --  Copia al portapapeles.
 
-vim.keymap.set({'n', 'x'}, 'gy', '"+y')
+set({'n', 'x'}, 'gy', '"+y')
 
 --  Pegar desde el portapapeles.
 
-vim.keymap.set({'n', 'x'}, 'gp', '"+p')
+set({'n', 'x'}, 'gp', '"+p')
 
 --  Borrar texto sin alterar el registro
-vim.keymap.set({'n', 'x'}, 'x', '"_x')
-vim.keymap.set({'n', 'x'}, 'X', '"_d')
+set({'n', 'x'}, 'x', '"_x')
+set({'n', 'x'}, 'X', '"_d')
+
+--  Gestión de ventanas
+set("n", "<leader>sv", "<C-w>v")  -- ventana dividida verticalmente
+set("n", "<leader>sh", "<C-w>s")  -- ventana dividida horizontalmente
+set("n", "<leader>se", "<C-w>=")  -- hacer que las ventanas divididas tengan el mismo ancho y alto
+set("n", "<leader>sx", ":close<CR>") -- cerrar la ventana dividida actual
+
+set("n", "<leader>to", ":tabnew<CR>") -- abrir nueva pestaña
+set("n", "<leader>tx", ":tabclose<CR>") -- cierre la pestaña actual
+set("n", "<leader>tn", ":tabn<CR>") -- ir a la siguiente pestaña
+set("n", "<leader>tp", ":tabp<CR>") -- ir a la pestaña anterior
+
+--  Mapeo para uso de NvimTree (No funciona)
+set("n", "<c-n>", "NvimTreeFindFileToggle<CR>")

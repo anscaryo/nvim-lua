@@ -1,29 +1,31 @@
-local alias opt = 'vim.opt'
---	muestra los numeros de linea
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.numberwidth = 1
+local opt = vim.opt
+-- local cmd = vim.cmd
+-- local exec = vim.api.nvim_exec
+-- local fn = vim.fn
 
---	habilitamos los modos del raton:
-vim.opt.mouse = 'a'
 
---	Ignora mayusculas/minusculas en las busquedas.
-vim.opt.ignorecase = true
+opt.relativenumber = true -- habilita los números de línea relativos.
+opt.number = true --  muestra el número de línea absoluto de la línea del cursor.
+opt.tabstop = 2 --  establece el número de espacios que representa un carácter de tabulación.
+opt.shiftwidth = 2  --  establece el número de espacios utilizados para la sangría.
+opt.expandtab = true  --  Permite el uso de espacios en lugar de tabulaciones. Al presionar la tecla “Tab”, Neovim inserta espacios según el tabstopvalor.
+opt.autoindent = true --  Copia la sangría de la línea actual al iniciar una nueva línea.
+opt.wrap = true -- pasa el resto del texto a la siguiente linea si no se ve en la pantalla
 
---	Resalta o no, los resultados de una búsqueda anterior.
-vim.opt.hlsearch = false
+-- Opciones de busqueda
+opt.ignorecase = true --  Ignora la distinción entre mayúsculas y minúsculas al realizar búsquedas.
+opt.smartcase = true  --  Si su consulta de búsqueda contiene letras mayúsculas. Si está todo en minúsculas, no distingue entre mayúsculas y minúsculas.
 
---	Hace que el texto de las lineas largas siempre sea visible y mantiene la identación.
+-- Linea del cursor
+opt.cursorline = true --  resalta la línea actual del cursor, haciéndola resaltar entre otras líneas del archivo.
+opt.termguicolors = true  --  Habilita colores verdaderos para el terminal. Esto permite a Neovim utilizar colores más precisos para resaltar la sintaxis y los temas.
+opt.background = "dark" --  establece el color de fondo para combinaciones de colores que admiten variantes claras y oscuras.
+opt.signcolumn = "yes"  --  muestra una columna de signos para evitar que el texto se desplace cuando se utilizan funciones como Git Gutter.
+opt.backspace = "indent,eol,start"  --  Determina el comportamiento de la tecla Retroceso. El valor "indent,eol,start"le permite eliminar la sangría, pasar a la línea anterior cuando se encuentra al comienzo de una línea y eliminar caracteres al final de una línea.
 
-vim.opt.wrap = true
-vim.opt.breakindent = true
+--  Ventanas divididas
+opt.splitright = true --  Al dividir una ventana horizontalmente, la nueva ventana aparece a la derecha.
+opt.splitbelow = true --  Al dividir una ventana verticalmente, la nueva ventana aparece debajo.
 
---	Establece el valor de la identación, por defecto es 8
-vim.opt.tabstop = 2
-
---	El espacio que Neovim usará para indentar una línea. Esta opción afecta los atajos << y >>. Su valor por defecto es 8. La convención es tener el mismo valor que tabstop.
-vim.opt.shiftwidth = 2
-
---	transformar los tab en espacios, por defecto es false.
-vim.opt.expandtab = false
-
+-- Portapapeles
+opt.clipboard:append("unnamedplus") --  Especifica el registro predeterminado que se utilizará para las operaciones de copiar y pegar.
