@@ -1,5 +1,8 @@
 # nvim-lua
-## Configuración inicial
-    Configuración de neovim con lua.
-    aun no estan configurados los plugins, ni todos los atajos de teclado.
 
+## Configuración inicial
+
+    - Configuración de neovim con lua.
+    - Añadido lualine y carpetas de configuración
+    - Añadido tema monokai
+    - Cambios en archivo settings con comentarios de las funciones.
