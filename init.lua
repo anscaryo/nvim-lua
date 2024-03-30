@@ -11,6 +11,8 @@ vim.opt.termguicolors = true-- empty setup using defaults
 --  nvim-tree --
 require("plugins.nvim-tree")
 
+--  telescope --
+require("plugins.telescope")
 --  LuaLine --
 --require("lualine").setup()
 require("plugins.lualine")	--	Carga la configuración de la barra inferior

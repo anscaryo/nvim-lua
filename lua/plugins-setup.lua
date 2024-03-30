@@ -36,8 +36,11 @@ return require('packer').startup(function(use)
   
 	-- nvim tree for sidebar and telescope  --
 	use "nvim-tree/nvim-tree.lua"
-	use "nvim-tree/nvim-web-devicons"
-	
+	use "nvim-treesitter/nvim-treesitter"
+  use "nvim-tree/nvim-web-devicons"
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.6',
+  }	
 	--	lualine
   use {
   'nvim-lualine/lualine.nvim',
