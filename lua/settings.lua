@@ -11,7 +11,7 @@ opt.shiftwidth = 2  --  establece el número de espacios utilizados para la sang
 opt.expandtab = true  --  Permite el uso de espacios en lugar de tabulaciones. Al presionar la tecla “Tab”, Neovim inserta espacios según el tabstopvalor.
 opt.autoindent = true --  Copia la sangría de la línea actual al iniciar una nueva línea.
 opt.wrap = true -- pasa el resto del texto a la siguiente linea si no se ve en la pantalla
-
+opt.showmode = false
 -- Opciones de busqueda
 opt.ignorecase = true --  Ignora la distinción entre mayúsculas y minúsculas al realizar búsquedas.
 opt.smartcase = true  --  Si su consulta de búsqueda contiene letras mayúsculas. Si está todo en minúsculas, no distingue entre mayúsculas y minúsculas.
