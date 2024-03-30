@@ -9,7 +9,7 @@ vim.g.loaded_netrwPlugin = 1-- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true-- empty setup using defaults
  
 --  nvim-tree --
---require("nvim-tree").setup()
+require("nvim-tree")
 
 --  LuaLine --
 --require("lualine").setup()

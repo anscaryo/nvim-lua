@@ -34,9 +34,9 @@ return require('packer').startup(function(use)
   vim.cmd[[colorscheme monokai]]
  
   
-	-- nvim tree for sidebar and telescope
-	--use "nvim-tree/nvim-tree.lua"
-	--use "nvim-tree/nvim-web-devicons"
+	-- nvim tree for sidebar and telescope  --
+	use "nvim-tree/nvim-tree.lua"
+	use "nvim-tree/nvim-web-devicons"
 	
 	--	lualine
   use {
