@@ -5,6 +5,7 @@ local g = vim.g
 --	Remapeo de teclas.
 g.mapleader = ' '
 vim.api.nvim_set_keymap('i', 'fj', '<ESC>', {noremap = true})
+vim.api.nvim_set_keymap('v', 'fj', '<ESC>', {noremap = true})
 
 --  Atajos:
 set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Guardar'})

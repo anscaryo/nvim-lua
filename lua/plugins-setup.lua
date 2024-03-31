@@ -30,10 +30,13 @@ return require('packer').startup(function(use)
   --vim.cmd[[colorscheme onedark]]
   
     --  monokai --
-  use "tanvirtin/monokai.nvim"
-  vim.cmd[[colorscheme monokai]]
+  --  use "tanvirtin/monokai.nvim"
+  --vim.cmd[[colorscheme monokai]]
  
-  
+    --  night-owl --
+  use("oxfist/night-owl.nvim")
+  vim.cmd[[colorscheme night-owl]]
+
 	-- nvim tree for sidebar and telescope  --
 	use "nvim-tree/nvim-tree.lua"
 	use "nvim-treesitter/nvim-treesitter"
