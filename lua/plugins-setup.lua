@@ -41,6 +41,7 @@ return require('packer').startup(function(use)
 	use "nvim-tree/nvim-tree.lua"
 	use "nvim-treesitter/nvim-treesitter"
   use "nvim-tree/nvim-web-devicons"
+  use "nvim-lua/plenary.nvim"
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
   }	
