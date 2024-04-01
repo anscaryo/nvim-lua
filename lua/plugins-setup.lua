@@ -40,7 +40,7 @@ return require('packer').startup(function(use)
 	-- nvim tree for sidebar and telescope  --
 	use "nvim-tree/nvim-tree.lua"
 	use "nvim-treesitter/nvim-treesitter"
-  use "nvim-tree/nvim-web-devicons"
+--  use "nvim-tree/nvim-web-devicons"
   use "nvim-lua/plenary.nvim"
 
   use {
@@ -50,11 +50,13 @@ return require('packer').startup(function(use)
   use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-}
-  --  use("nvim-lualine/lualine.nvim")  --  Plugin lualine
+  }
 
+  --  autopairs --
+  use "windwp/nvim-autopairs"
+  use "windwp/nvim-ts-autotag"
 
-	-- fin plugins
+-- fin plugins
     if packer_bootstrap then
     require('packer').sync()
   end

@@ -8,13 +8,17 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1-- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true-- empty setup using defaults
  
---  nvim-tree --
+--	Carga los Plugins instalados.
+  --  nvim-tree --
 require("plugins.nvim-tree")
 
---  telescope --
+  --  autopairs --
+require("plugins.autopairs")	
+
+  --  telescope --
 require("plugins.telescope")
---  LuaLine --
---require("lualine").setup()
+
+  --  LuaLine --
 require("plugins.lualine")	--	Carga la configuración de la barra inferior
 
 --	set termguicolors to enable highlight groups
