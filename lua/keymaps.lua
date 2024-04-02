@@ -13,6 +13,8 @@ set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Guardar'})
 set('n', '<leader>q', '<cmd>:q!<cr>', {desc = 'Salir'})
 
 set('n', '<leader>wq', '<cmd>:wq<cr>', {desc = 'Guardar y Salir'})
+set('n', '<leader>wa', '<cmd>:wqa!<cr>', {desc = 'Guardar y Salir'})
+
 --  Copia al portapapeles.
 
 set({'n', 'x'}, 'gy', '"+y')
