@@ -13,6 +13,11 @@ set('n', '<leader>w', '<cmd>write<cr>', {desc = 'Guardar'})
 set('n', '<leader>q', '<cmd>:q!<cr>', {desc = 'Salir'})
 
 set('n', '<leader>wq', '<cmd>:wq<cr>', {desc = 'Guardar y Salir'})
+
+set('n', '<leader>bb', '<cmd>:nohl<cr>', {desc = 'Borra el resultado de una busqueda'})
+
+set('n', '<leader>ss', '<cmd>:source%<cr>', {desc = 'Recarga el archivo actual'})
+
 --  Copia al portapapeles.
 
 set({'n', 'x'}, 'gy', '"+y')
