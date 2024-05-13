@@ -18,6 +18,12 @@ set('n', '<leader>bb', '<cmd>:nohl<cr>', {desc = 'Borra el resultado de una busq
 
 set('n', '<leader>ss', '<cmd>:source%<cr>', {desc = 'Recarga el archivo actual'})
 
+set('n', '<c-h>', '<C-w>h')
+
+set('n', '<c-l>', '<C-w>l')
+
+
+-- set('n', '<A>l', '<cmd')
 --  Copia al portapapeles.
 
 set({'n', 'x'}, 'gy', '"+y')

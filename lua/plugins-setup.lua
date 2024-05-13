@@ -51,7 +51,10 @@ return require('packer').startup(function(use)
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-
+  --  bufferline
+  use {
+    'akinsho/bufferline.nvim', tag= "*", requires = 'nvim-tree/nvim-web-devicons'
+  }
   --  autopairs --
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"

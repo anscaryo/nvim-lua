@@ -20,7 +20,9 @@ require("plugins.telescope")
 
   --  LuaLine --
 require("plugins.lualine")	--	Carga la configuración de la barra inferior
-
+  --  Bufferline
+vim.opt.termguicolors = true
+require("bufferline").setup{}
 --	set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 --	empty setup using defaults
