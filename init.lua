@@ -11,7 +11,8 @@ vim.opt.termguicolors = true-- empty setup using defaults
 --	Carga los Plugins instalados.
   --  nvim-tree --
 require("plugins.nvim-tree")
-
+require("plugins.treesitter")
+ 
   --  autopairs --
 require("plugins.autopairs")	
 
@@ -23,6 +24,12 @@ require("plugins.lualine")	--	Carga la configuración de la barra inferior
   --  Bufferline
 vim.opt.termguicolors = true
 require("bufferline").setup{}
+  --  lsp --
+require("plugins.lsp.mason")
+require("plugins.lsp.completion")
+require("plugins.lsp.nvim-cmp")
+require("plugins.lsp.lspconfig")
+require("plugins.lsp.lspsaga")
 --	set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 --	empty setup using defaults

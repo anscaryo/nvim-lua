@@ -24,6 +24,8 @@ set('n', '<c-l>', '<C-w>l')
 
 
 -- set('n', '<A>l', '<cmd')
+set('n', '<leader>wa', '<cmd>:wqa!<cr>', {desc = 'Guardar y Salir'})
+
 --  Copia al portapapeles.
 
 set({'n', 'x'}, 'gy', '"+y')

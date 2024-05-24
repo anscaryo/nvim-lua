@@ -10,7 +10,6 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
-
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 	-- Insertar los paquetes de plugins despues de esta linea.
@@ -46,7 +45,8 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
   }	
-	--	lualine
+	
+  --	lualine
   use {
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -55,11 +55,34 @@ return require('packer').startup(function(use)
   use {
     'akinsho/bufferline.nvim', tag= "*", requires = 'nvim-tree/nvim-web-devicons'
   }
+  
+  -- pane movement plugin
+  use "christoomey/vim-tmux-navigator"
+  
   --  autopairs --
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"
+  
+  -- completions
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-nvim-lsp"
+  
+ -- snippets
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
+  use "saadparwaiz1/cmp_luasnip" -- lsp -> language server protocols
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    "glepnir/lspsaga.nvim", branch = "main", -- for window like vscode
+    "jose-elias-alvarez/typescript.nvim",
+    "onsails/lspkind.nvim"
+  }
 
--- fin plugins
+  -- fin plugins
     if packer_bootstrap then
     require('packer').sync()
   end
