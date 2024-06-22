@@ -13,13 +13,14 @@ mason.setup()
 mason_lspconfig.setup({
     ensure_installed = {
         "lua_ls",
-        "clangd",
+        "clangd", --C y C++
+        "jsonls", --JSON
 --        "tailwindcss",
 --        "tsserver",
 --        "gopls",
 --        "rust_analyzer",
         "jdtls",
-        "java_language-server",
+--        "java_language-server",
         "jedi_language_server",
         "pyre",
 --        "pyright",
